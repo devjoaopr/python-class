@@ -7,24 +7,26 @@ produto = []
 valores = []
 
 while True:
-    fim = input("Nome do produto produto (ou digite 'fim' para encerrar):")
-    if fim == "fim":
+    produto = input("Nome do produto (ou digite 'fim' para encerrar):")
+    if produto == "fim":
         break
     valor = float(input(f"valor de {produto}"))
     valores.append(valor)
 
-    subtotal = 0
-    for v in valores:
-        subtotal = subtotal + v
+subtotal = 0.0
+for v in valores:
+    subtotal = subtotal + v
 
-    desconto = input(float("insira o valor do desconto em %"))
-    subtotalComDesconto = subtotal - (subtotal * desconto / 100)
-    total = subtotalComDesconto + 5.0  # taxa de frete
+desconto = float(input("insira o valor do desconto em %"))
+subtotalComDesconto = subtotal - (subtotal * desconto / 100)
+total = subtotalComDesconto + 5.0  # taxa de frete
 
-    print("=== Recibo ===")
-    print(f"Cliente: {nome} / telefone: {telefone}")
-    print(f"Endereço {endereco}")
+print("=== Recibo ===")
+print(f"Cliente: {nome} / telefone: {telefone}")
+print(f"Endereço {endereco}")
 
-    for i in range(len(produto)):
-        print(f"{produto[i]} - R$ {valores[i]}")
+for i in range(len(produto)):
+    print(f"{produto[i]} - R$ {valores[i]}")
     print(f"subtotal: R${round(subtotal, 2)}")
+    print(f"Desconto{desconto}%")
+    print(f"Total a pagar: R$ {total}")
