@@ -14,8 +14,9 @@ try:
     """ Descrever o pedido """
     descrever_pedido(cliente, produtos=produtos, subtotal=subtotal, total=total)
 
-    """ Emitir recibo do pedido"""
+    """ Emitir recibo do pedido """
     emitirRecibo(cliente, produtos, subtotal, total)
 
 except (ValueError, TypeError) as error:
+    """lança alguma exceção caso ocorra algum erro durante a execução do código"""
     print(f"Ocorreu um erro: {error}")
