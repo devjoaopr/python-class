@@ -1,4 +1,4 @@
-from pedidos import cadastrarClientes, cadastrarProdutos, calcularTotal, emitirRecibo
+from pedidos import cadastrarClientes, cadastrarProdutos, emitirRecibo
 from pedidosRefatoracao import calcularTotal
 
 try:
